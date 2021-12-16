@@ -9,11 +9,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var namee: UITextField!
+    
+    @IBOutlet weak var weightt: UITextField!
+    @IBOutlet weak var heightt: UITextField!
+    
+    @IBOutlet weak var BMIshow: UILabel!
+    @IBOutlet weak var helloname: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
     }
 
-
+    
+    @IBAction func BMIresult(_ sender: Any)
+    {
+        let weightt = Float(self.weightt.text!)!
+        let heightt = Float(self.heightt.text!)!
+        let bmi = Float(weightt/(heightt*heightt))
+        self.helloname.text = "Hello, " + self.namee.text!
+        self.BMIshow.text = String(format:"%2f", bmi)
+    }
+    
 }
 
