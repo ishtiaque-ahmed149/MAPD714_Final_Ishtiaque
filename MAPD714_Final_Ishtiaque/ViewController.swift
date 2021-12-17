@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var switch1: UISwitch!
     @IBOutlet weak var BMIshow: UILabel!
     @IBOutlet weak var helloname: UILabel!
+   
+    @IBOutlet weak var BMImsgLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,21 +31,76 @@ class ViewController: UIViewController {
     
     @IBAction func BMIresult(_ sender: Any)
     {
-        let weightt = Float(self.weightt.text!)!
-        let heightt = Float(self.heightt.text!)!
-        if switch1.isOn
+        if (self.weightt.text!=="" || self.heightt.text!=="")
         {
-            let bmi = Float(weightt/(heightt*heightt))
-            self.helloname.text = "Hello, " + self.namee.text!
-            self.BMIshow.text = String(format:"%2f", bmi)
+            let alertController = UIAlertController(title: "You left Empty Field(s)", message:
+                "Please enter both height and weight", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+
+            self.present(alertController, animated: true, completion: nil)
+            
         }
         else
         {
-            let bmi = Float((weightt*703)/(heightt*heightt))
-            self.helloname.text = "Hello, " + self.namee.text!
-            self.BMIshow.text = String(format:"%2f", bmi)
+            let weightt = Double(self.weightt.text!)!
+            let heightt = Double(self.heightt.text!)!
+            
+            if switch1.isOn
+            {
+                var bmi = Double(weightt/(heightt*heightt))
+                self.helloname.text = "Hello, " + self.namee.text!
+                self.BMIshow.text = String(format:"%2f", bmi)
+                
+                if (bmi < 16)
+                { self.BMImsgLabel.text = "Severe Thinness"}
+                else if (bmi >= 16 && bmi < 17)
+                { self.BMImsgLabel.text = "Moderate Thinness"}
+                else if (bmi >= 17 && bmi < 18.5)
+                { self.BMImsgLabel.text = "Mild Thinness"}
+                else if (bmi >= 18.5 && bmi < 25)
+                { self.BMImsgLabel.text = "Normal"}
+                else if (bmi >= 25 && bmi < 30)
+                { self.BMImsgLabel.text = "Overweight"}
+                else if (bmi >= 30 && bmi < 35)
+                { self.BMImsgLabel.text = "Obese Class I"}
+                else if (bmi >= 35 && bmi <= 40)
+                { self.BMImsgLabel.text = "Obese Class II"}
+                else if (bmi > 40)
+                { self.BMImsgLabel.text = "Obese Class III"}
+            }
+                
+            else
+            {
+                var bmi = Float((weightt*703)/(heightt*heightt))
+                self.helloname.text = "Hello, " + self.namee.text!
+                self.BMIshow.text = String(format:"%2f", bmi)
+                
+                if (bmi < 16)
+                { self.BMImsgLabel.text = "Severe Thinness"}
+                else if (bmi >= 16 && bmi < 17)
+                { self.BMImsgLabel.text = "Moderate Thinness"}
+                else if (bmi >= 17 && bmi < 18.5)
+                { self.BMImsgLabel.text = "Mild Thinness"}
+                else if (bmi >= 18.5 && bmi < 25)
+                { self.BMImsgLabel.text = "Normal"}
+                else if (bmi >= 25 && bmi < 30)
+                { self.BMImsgLabel.text = "Overweight"}
+                else if (bmi >= 30 && bmi < 35)
+                { self.BMImsgLabel.text = "Obese Class I"}
+                else if (bmi >= 35 && bmi <= 40)
+                { self.BMImsgLabel.text = "Obese Class II"}
+                else if (bmi > 40)
+                { self.BMImsgLabel.text = "Obese Class III"}
+            }
         }
+        
+
     }
     
 }
 
+
+
+
+
+//References: https://www.ioscreator.com/tutorials/display-alert-ios-tutorial
