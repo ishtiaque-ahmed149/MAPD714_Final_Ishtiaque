@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A32D8CBB276C83D200A2303B /* BMITrackingControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D8CBA276C83D200A2303B /* BMITrackingControllerViewController.swift */; };
 		A33205DA276B353700B5CCD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33205D9276B353700B5CCD8 /* AppDelegate.swift */; };
 		A33205DC276B353700B5CCD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33205DB276B353700B5CCD8 /* SceneDelegate.swift */; };
 		A33205DE276B353700B5CCD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33205DD276B353700B5CCD8 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A32D8CBA276C83D200A2303B /* BMITrackingControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMITrackingControllerViewController.swift; sourceTree = "<group>"; };
 		A33205D6276B353700B5CCD8 /* MAPD714_Final_Ishtiaque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAPD714_Final_Ishtiaque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33205D9276B353700B5CCD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A33205DB276B353700B5CCD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				A33205D9276B353700B5CCD8 /* AppDelegate.swift */,
 				A33205DB276B353700B5CCD8 /* SceneDelegate.swift */,
 				A33205DD276B353700B5CCD8 /* ViewController.swift */,
+				A32D8CBA276C83D200A2303B /* BMITrackingControllerViewController.swift */,
 				A33205DF276B353700B5CCD8 /* Main.storyboard */,
 				A33205E2276B353E00B5CCD8 /* Assets.xcassets */,
 				A33205E4276B353E00B5CCD8 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				A33205DE276B353700B5CCD8 /* ViewController.swift in Sources */,
 				A33205DA276B353700B5CCD8 /* AppDelegate.swift in Sources */,
+				A32D8CBB276C83D200A2303B /* BMITrackingControllerViewController.swift in Sources */,
 				A33205DC276B353700B5CCD8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

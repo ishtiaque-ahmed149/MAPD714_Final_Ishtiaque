@@ -28,6 +28,10 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func Done(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "BMITrackingController") as! BMITrackingControllerViewController
+        self.navigationController?.pushViewController(vc , animated: true)
+    }
     
     @IBAction func BMIresult(_ sender: Any)
     {

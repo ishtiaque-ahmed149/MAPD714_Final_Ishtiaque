@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IAG-yb-77h">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -74,7 +74,7 @@
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                 <color key="onTintColor" systemColor="systemGreenColor"/>
-                                <color key="thumbTintColor" systemColor="systemBlueColor"/>
+                                <color key="thumbTintColor" systemColor="systemIndigoColor"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Metric" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="du1-tN-rRv">
                                 <rect key="frame" x="295" y="483" width="61" height="40"/>
@@ -121,7 +121,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddq-4P-e4z">
                                 <rect key="frame" x="109" y="547" width="213" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="CALCULATE">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
@@ -160,16 +160,20 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wk-61-Uye">
                                 <rect key="frame" x="144" y="800" width="149" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Done">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="19"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="Done:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iKk-IT-eWa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pVw-h2-krt"/>
                     <connections>
                         <outlet property="BMImsgLabel" destination="K0q-qi-wG1" id="UQ0-c5-lIl"/>
                         <outlet property="BMIshow" destination="uXg-Cc-qe2" id="JNK-gY-fiI"/>
@@ -178,26 +182,55 @@
                         <outlet property="namee" destination="8MU-Lo-4hS" id="4w1-kj-3l9"/>
                         <outlet property="switch1" destination="Wp1-dh-Odn" id="gmg-TN-h7p"/>
                         <outlet property="weightt" destination="0pr-Fo-SH6" id="w6U-xc-G7a"/>
+                        <segue destination="2i0-VH-uHk" kind="show" id="nBP-Zt-AhY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.037383177570092" y="67.386609071274307"/>
+            <point key="canvasLocation" x="496" y="113"/>
+        </scene>
+        <!--Tracking Controller View Controller-->
+        <scene sceneID="5yE-vY-kIx">
+            <objects>
+                <viewController storyboardIdentifier="BMITrackingController" id="2i0-VH-uHk" customClass="BMITrackingControllerViewController" customModule="MAPD714_Final_Ishtiaque" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZpN-dP-9zK">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Ig-Nd-fGK"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SNf-6w-ZlX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="csf-Y1-RuC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1214" y="120"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TNe-xo-Po3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IAG-yb-77h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZFB-1X-tLP">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8CV-kZ-oFb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4j2-db-hPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271" y="113"/>
         </scene>
     </scenes>
     <resources>
         <image name="pencil" catalog="system" width="128" height="113"/>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
