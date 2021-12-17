@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var namee: UITextField!
     
+    @IBOutlet weak var genderr: UITextField!
+    @IBOutlet weak var agee: UITextField!
     @IBOutlet weak var weightt: UITextField!
     @IBOutlet weak var heightt: UITextField!
     
@@ -29,10 +31,29 @@ class ViewController: UIViewController {
     }
 
     @IBAction func Done(_ sender: Any) {
+        let weight1 = weightt.text
+        let height1 = heightt.text
+        let name1 = namee.text
+        
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "BMITrackingController") as! BMITrackingControllerViewController
+        
+        vc.weight = weight1!
+        vc.height = height1!
+        vc.name = name1!
         self.navigationController?.pushViewController(vc , animated: true)
     }
     
+    @IBAction func ClearAll(_ sender: Any)
+    {
+        namee.text!=""
+        agee.text!=""
+        genderr.text!=""
+        weightt.text!=""
+        heightt.text!=""
+        BMIshow.text!="00"
+        BMImsgLabel.text!="Normal"
+        helloname.text!="hello"
+    }
     @IBAction func BMIresult(_ sender: Any)
     {
         if (self.weightt.text!=="" || self.heightt.text!=="")

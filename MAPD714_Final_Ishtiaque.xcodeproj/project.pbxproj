@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A32D8CBB276C83D200A2303B /* BMITrackingControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32D8CBA276C83D200A2303B /* BMITrackingControllerViewController.swift */; };
+		A32D8CBE276CDA3900A2303B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32D8CBD276CDA3800A2303B /* CoreData.framework */; };
 		A33205DA276B353700B5CCD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33205D9276B353700B5CCD8 /* AppDelegate.swift */; };
 		A33205DC276B353700B5CCD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33205DB276B353700B5CCD8 /* SceneDelegate.swift */; };
 		A33205DE276B353700B5CCD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33205DD276B353700B5CCD8 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		A32D8CBA276C83D200A2303B /* BMITrackingControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMITrackingControllerViewController.swift; sourceTree = "<group>"; };
+		A32D8CBD276CDA3800A2303B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A33205D6276B353700B5CCD8 /* MAPD714_Final_Ishtiaque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAPD714_Final_Ishtiaque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33205D9276B353700B5CCD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A33205DB276B353700B5CCD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,17 +35,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A32D8CBE276CDA3900A2303B /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A32D8CBC276CDA3800A2303B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A32D8CBD276CDA3800A2303B /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A33205CD276B353700B5CCD8 = {
 			isa = PBXGroup;
 			children = (
 				A33205D8276B353700B5CCD8 /* MAPD714_Final_Ishtiaque */,
 				A33205D7276B353700B5CCD8 /* Products */,
+				A32D8CBC276CDA3800A2303B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
