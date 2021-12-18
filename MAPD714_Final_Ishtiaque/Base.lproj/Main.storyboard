@@ -172,7 +172,7 @@
                                 <rect key="frame" x="295" y="547" width="86" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Clear " titleAlignment="center">
+                                <buttonConfiguration key="configuration" style="filled" title="Reset" titleAlignment="center">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
                                 </buttonConfiguration>
                                 <connections>

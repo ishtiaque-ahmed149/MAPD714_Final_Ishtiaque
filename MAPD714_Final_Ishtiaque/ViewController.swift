@@ -7,6 +7,7 @@
 //  Description: This is a BMI Calculator with 2 screens and database capabilities.
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController {
     //creating weak variables for textfields and labels
@@ -26,7 +27,8 @@ class ViewController: UIViewController {
    //viewDidLoad function
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //performing realm database tasks
+        let realm = try! Realm()
         
     }
     //creating function for when pressing DONE buton perform these tasks
