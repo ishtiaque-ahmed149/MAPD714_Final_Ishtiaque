@@ -3,13 +3,13 @@
 //
 //  Created by Ishtiaque Ahmed on 12/16/21.
 //  Final Exam, MAPD714 (iOS development)
-//  Changes Made: First UI attemp (Dec 15th), Changed looks of the UI from the first attempt, added launchscreen (Dec 16th), completed first screen with getting proper results switching mertic/emperial (Dec 16th),
+//  Changes Made: First UI attemp (Dec 15th), Changed looks of the UI from the first attempt, added launchscreen (Dec 16th), completed first screen with getting proper results switching mertic/emperial (Dec 16th), Made cells functional to print weight, bmi and current date (dec 17th)
 //  Description: This is a BMI Calculator with 2 screens and database capabilities.
 
 import UIKit
 
 class ViewController: UIViewController {
-
+    //creating weak variables for textfields and labels
     @IBOutlet weak var namee: UITextField!
     
     @IBOutlet weak var genderr: UITextField!
@@ -23,28 +23,28 @@ class ViewController: UIViewController {
    
     @IBOutlet weak var BMImsgLabel: UILabel!
     
-    
+   //viewDidLoad function
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
     }
-
+    //creating function for when pressing DONE buton perform these tasks
     @IBAction func Done(_ sender: Any) {
         let weight1 = weightt.text
-        let height1 = heightt.text
-        let name1 = namee.text
-        
+        let bmi1 = BMIshow.text
+    
+     //going to next screen
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "BMITrackingController") as! BMITrackingControllerViewController
-        
+      //taking values to next screen from this screen
         vc.weight = weight1!
-        vc.height = height1!
-        vc.name = name1!
+        vc.bmi = bmi1!
+
         self.navigationController?.pushViewController(vc , animated: true)
     }
-    
+    //on press of clear button do this
     @IBAction func ClearAll(_ sender: Any)
-    {
+    {   //clearing all the fields
         namee.text!=""
         agee.text!=""
         genderr.text!=""
@@ -69,12 +69,12 @@ class ViewController: UIViewController {
         {
             let weightt = Double(self.weightt.text!)!
             let heightt = Double(self.heightt.text!)!
-            
+     //if switch is towards METRIC then do metric bmi calculation
             if switch1.isOn
             {
                 var bmi = Double(weightt/(heightt*heightt))
                 self.helloname.text = "Hello, " + self.namee.text!
-                self.BMIshow.text = String(format:"%2f", bmi)
+                self.BMIshow.text = String(format:"%.\(2)f", bmi)
                 
                 if (bmi < 16)
                 { self.BMImsgLabel.text = "Severe Thinness"}
@@ -93,12 +93,12 @@ class ViewController: UIViewController {
                 else if (bmi > 40)
                 { self.BMImsgLabel.text = "Obese Class III"}
             }
-                
+       //if the switch is turned towards EMPERIAL side then do emperial bmi calculation
             else
             {
                 var bmi = Float((weightt*703)/(heightt*heightt))
                 self.helloname.text = "Hello, " + self.namee.text!
-                self.BMIshow.text = String(format:"%2f", bmi)
+                self.BMIshow.text = String(format:"%.\(2)f", bmi)
                 
                 if (bmi < 16)
                 { self.BMImsgLabel.text = "Severe Thinness"}
